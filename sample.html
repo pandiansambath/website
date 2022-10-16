@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<!--this is for custom cursor-->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="samples_style.css">
+	<link rel="stylesheet" href="style_cursor.css">
+    <!--till here, it is for custom cursor-->
+	<title>fav</title></head>
+<body>
+	<div class="hero">
+        <div class="content">
+	<h1><center>THESE ARE MY FAVORITE SONGS</center></h1>
+	</div>
+	<center>
+		<button type="button">
+			<h2> <a href="sam.html" style="color:#ffffff" style="text-decoration: none"; target="_blank"><b>click here<b></a></h2>
+		   </button>
+		</center>
+		</div>
+		<div class="gohome" >
+		<a href="index.html" style="color:#828181" style="text-decoration: none";> 
+			<b>GO HOME
+			</b>
+		</a>
+		</div>
+		<!--CUSTOM CURSOR STARTS HERE-->
+		<div class="cursor"></div>
+
+		<script type="text/javascript">
+		const cursor = document.querySelector(".cursor");
+		var timeout;
+	
+		//follow cursor on mousemove
+		document.addEventListener("mousemove", (e) => {
+		  let x = e.pageX;
+		  let y = e.pageY;
+	
+		  cursor.style.top = y + "px";
+		  cursor.style.left = x + "px";
+		  cursor.style.display = "block";
+	
+		  //cursor effects when mouse stopped
+		  function mouseStopped(){
+			cursor.style.display = "none";
+		  }
+		  clearTimeout(timeout);
+		  timeout = setTimeout(mouseStopped, 1000);
+		});
+	
+		//cursor effects when mouseout
+		document.addEventListener("mouseout", () => {
+		  cursor.style.display = "none";
+		});
+		</script>
+		<!--CUSTOM CURSOR ENDS HERE-->
+
+</body>
+</html>
+

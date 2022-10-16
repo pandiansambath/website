@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_cursor.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pandian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="content">
+            <small><b>Hi Iam pandian</></small>
+            <h1>welcome to my world</h1>
+            <small><b>wanna know about me</b></small>
+            <button type="button">
+                 <h2> <a href="sample.html" style="color:#ffffff" style="text-decoration: none"; target="_blank"><b>hit here<b></a></h2>
+                </button>
+        </div>
+        
+
+        <div class="bubbles">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-bottom">
+            
+            
+            <ul class="socials">
+                <li><a href="https://wa.me/8524827391" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://instagram.com/pandiansambath" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/pandiansambth" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://t.me/pandiansambath" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="https://twitter.com/pandiansamabth" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="mailto: pandian2pandi@gmail.com" target="_blank"><i class="fa fa-google"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCFRf_TXgNF8SWUoMCFE0rtw" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/pandian-sambath-6b97601b3/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+            </div>
+
+    </footer>
+
+    <!--CUSTOM CURSOR STARTS HERE-->
+    <div class="cursor"></div>
+
+    <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      //cursor effects when mouse stopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 1000);
+    });
+
+    //cursor effects when mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    });
+    </script>
+    <!--CUSTOM CURSOR ENDS HERE-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<!--this is for custom cursor-->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style_cursor.css">
+    <!--till here, it is for custom cursor-->
+	<title>simple cd</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index_download.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body bgcolor="pink" >
+	<center>
+		<h1>
+				<b>
+					<span>PLAYLIST</span>
+				</b>
+			</h1>
+		</center>
+		<iframe src="https://onedrive.live.com/embed?cid=6463EBC19E625EF7&resid=6463EBC19E625EF7%211258&authkey=AHDIZB5L05F-OQI" width="560" height="312" title=" Panimalar College" frameborder="0" scrolling="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			
+		</iframe>
+		<div class="gohomesam">
+	<p> 
+		<a href="index.html"> <ins><b><span style="color: grey;">  GO HOME</span></b></ins></a>
+	</p>
+		</div>
+		<!--CUSTOM CURSOR STARTS HERE-->
+        <div class="download">
+		<a href="./images/background.png" download='image' class="download-btn">click here to download
+			<i class="fa fa-download"></i>
+		</a>
+		</div>
+		<div class="cursor"></div>
+
+		<script type="text/javascript">
+		const cursor = document.querySelector(".cursor");
+		var timeout;
+	
+		//follow cursor on mousemove
+		document.addEventListener("mousemove", (e) => {
+		  let x = e.pageX;
+		  let y = e.pageY;
+	
+		  cursor.style.top = y + "px";
+		  cursor.style.left = x + "px";
+		  cursor.style.display = "block";
+	
+		  //cursor effects when mouse stopped
+		  function mouseStopped(){
+			cursor.style.display = "none";
+		  }
+		  clearTimeout(timeout);
+		  timeout = setTimeout(mouseStopped, 1000);
+		});
+	
+		//cursor effects when mouseout
+		document.addEventListener("mouseout", () => {
+		  cursor.style.display = "none";
+		});
+		</script>
+		<!--CUSTOM CURSOR ENDS HERE-->
+	</body>
+</html>
